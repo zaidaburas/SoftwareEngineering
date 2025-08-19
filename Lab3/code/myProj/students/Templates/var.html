@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Hello {{name}}</h1>
+    <h1>you are {{age}}</h1> -->
+    {% for i in data %}
+    {% if i.age > 20 %}
+    <p>{{i.name}} is bigger than 20</p>
+    {% elif i.age < 20 %}
+    <p>{{i.name}} is smaller than 20</p>
+    {% else %}
+    <p>{{i.name}} is 20</p>
+    {% endif %}
+    {% endfor %}
+
+</body>
+</html>

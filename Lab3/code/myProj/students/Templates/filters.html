@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <p><strong>upper:</strong> {{ name|upper }}</p>
+    <p><strong>lower:</strong> {{ name|lower }}</p>
+    <p><strong>title:</strong> {{ name|title }}</p>
+    <p><strong>capfirst:</strong> {{ name|capfirst }}</p>
+    <p><strong>length :</strong> {{ items|length }}</p>
+    <p><strong>default:</strong> {{ empty_value|default:"Empty" }}</p>
+    <p><strong>default_if_none:</strong> {{ none_value|default_if_none:"N/A" }}</p>
+    <p><strong>date:</strong> {{ today|date:"d/m/Y" }}</p>
+    <p><strong>time:</strong> {{ today|time:"H:i" }}</p>
+    <p><strong>truncatechars:</strong> {{ text|truncatechars:15 }}</p>
+    <p><strong>truncatewords:</strong> {{ text|truncatewords:3 }}</p>
+    <p><strong>join:</strong> {{ items|join:", " }}</p>
+    <p><strong>add:</strong> {{ number|add:"5" }}</p>
+    <p><strong>divisibleby:</strong> {% if number|divisibleby:5 %}نعم{% else %}لا{% endif %}</p>
+    <p><strong>yesno:</strong> {{ True|yesno:"نعم,لا" }}</p>
+    <p><strong>filesizeformat:</strong> {{ big_number|filesizeformat }}</p>
+    <p><strong>safe:</strong> {{ html_code|safe }}</p>
+    <p><strong>escape:</strong> {{ html_code|escape }}</p>
+    <p><strong>floatformat:</strong> {{ pi|floatformat:2 }}</p>
+    <p><strong>slice:</strong> {{ name|slice:":5" }}</p>
+    <p><strong>pluralize:</strong> {{ items|length }} item{{ items|pluralize:"two, " }}</p>
+
+    <hr>
+    
+    <p>{{ name|upper|truncatechars:8 }}</p>
+</body>
+</html>
