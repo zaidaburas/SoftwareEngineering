@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     margin: 0;
 }
 header {
@@ -25,4 +25,68 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: 14px;
+}
+
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+/* تنسيقات الجدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background: #333;
+    color: white;
+}
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* أزرار */
+a.btn, button {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 3px;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+}
+.add { background: #4CAF50; color: white; }
+.edit { background: #FFC107; color: black; }
+.delete { background: #F44336; color: white; }
+.cancel { background: #777; color: white; }
+
+/* نموذج */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }

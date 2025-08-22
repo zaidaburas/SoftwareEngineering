@@ -1,0 +1,9 @@
+{% include 'header.html' %}
+{% block myContent %}
+{% for i in data %}
+{% comment %} {% for j in  %}
+<h1>{{i}}</h1>
+{% endfor %} {% endcomment %}
+{% endfor %} 
+{% endblock %}
+{% include 'footer.html' %}

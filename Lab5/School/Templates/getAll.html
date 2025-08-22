@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+    <h2>📚 قائمة المدرسين</h2>
+    <a href="{% url 'create' %}" class="btn add">➕ إضافة مدرس</a>
+    <table>
+        <thead>
+            <tr>
+                <th>الاسم</th>
+                <th>سنوات الخبرة</th>
+                <th>الراتب</th>
+                <th>مازال يدرس؟</th>
+                <th>تاريخ التوظيف</th>
+                <th>إجراءات</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for t in teachers %}
+            <tr>
+                <td>{{ t.name }}</td>
+                <td>{{ t.experience_years }}</td>
+                <td>{{ t.salary }}</td>
+                <td>{{ t.is_active|yesno:"✅,❌" }}</td>
+                <td>{{ t.hire_date }}</td>
+                <td>
+                    <a href="{% url 'update' t.id %}" class="btn edit">✏ تعديل</a>
+                    <a href="{% url 'delete' t.id %}" class="btn delete">🗑 حذف</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">🚫 لا يوجد بيانات</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% include 'footer.html' %}

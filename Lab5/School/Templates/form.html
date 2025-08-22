@@ -1,0 +1,11 @@
+{% include 'header.html' %}
+
+    <h2>{{ title }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn add">حفظ</button>
+        <a href="{% url 'getAll' %}" class="btn">↩ رجوع</a>
+    </form>
+
+{% include 'footer.html' %}

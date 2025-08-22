@@ -1,0 +1,9 @@
+{% include 'header.html' %}
+
+    <h3>⚠ هل أنت متأكد من حذف "{{ teacher.name }}" ؟</h3>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn delete">🗑 حذف</button>
+        <a href="{% url 'getAll' %}" class="btn">إلغاء</a>
+    </form>
+{% include 'footer.html' %}
